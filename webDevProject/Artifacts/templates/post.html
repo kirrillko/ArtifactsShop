@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{post.title}}</h1>
+
+{% if post.photo %}
+<p><img class="img-article-left" src="{{post.photo.url}}"></p>
+{% endif %}
+
+<h4>Цена</h4>
+{{post.price}} золотых
+
+<h4>Характеристики</h4>
+{{post.stats}}
+
+<h4>История</h4>
+{{post.history}}
+
+<h4> Комплект: {{set}} </h4>
+{{set.bonus|linebreaks}}
+
+{% endblock %}
